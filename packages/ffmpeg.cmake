@@ -49,7 +49,7 @@ ExternalProject_Add(ffmpeg
         --disable-muxers
         --disable-decoders
         --disable-encoders
-        --disable-demuxers
+
         --disable-parsers
         --disable-protocols
         --disable-filters
