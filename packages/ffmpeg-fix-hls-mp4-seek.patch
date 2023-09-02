@@ -1,5 +1,5 @@
 diff --git a/libavformat/hls.c b/libavformat/hls.c
-index 8a96a37ff9..46450404ac 100644
+index 8a96a37ff9..89c2557e59 100644
 --- a/libavformat/hls.c
 +++ b/libavformat/hls.c
 @@ -2027,7 +2027,7 @@ static int hls_read_header(AVFormatContext *s)
@@ -53,7 +53,7 @@ index 8a96a37ff9..46450404ac 100644
 +            void *iter = NULL;
 +            while ((in_fmt = av_demuxer_iterate(&iter)))
 +                if (strstr(in_fmt->name, "mpegts"))
-+                break;
++                    break;
          }
  
          if (seg && seg->key_type == KEY_SAMPLE_AES) {
