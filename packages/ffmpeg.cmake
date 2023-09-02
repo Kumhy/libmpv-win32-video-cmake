@@ -49,7 +49,7 @@ ExternalProject_Add(ffmpeg
         --disable-muxers
         --disable-decoders
         --disable-encoders
-
+        --disable-demuxers
         --disable-parsers
         --disable-protocols
         --disable-filters
@@ -209,21 +209,16 @@ ExternalProject_Add(ffmpeg
         --enable-demuxer=matroska
         --enable-demuxer=dash
         --enable-demuxer=webm_dash_manifest
-
         --enable-demuxer=aac
         --enable-demuxer=ac3
         --enable-demuxer=aiff
         --enable-demuxer=ape
         --enable-demuxer=asf
         --enable-demuxer=au
-        --enable-demuxer=avi
         --enable-demuxer=flac
-        --enable-demuxer=flv
-        --enable-demuxer=matroska
-        --enable-demuxer=mov
-        --enable-demuxer=m4v
         --enable-demuxer=mp3
         --enable-demuxer=mpc*
+        --enable-demuxer=image_*
         --enable-demuxer=ogg
         --enable-demuxer=pcm*
         --enable-demuxer=rm
