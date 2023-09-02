@@ -1,0 +1,15 @@
+diff --git a/libavformat/format.c b/libavformat/format.c
+index 76f25ab5a6..0fbb9c0734 100644
+--- a/libavformat/format.c
++++ b/libavformat/format.c
+@@ -192,6 +192,10 @@ const AVInputFormat *av_probe_input_format3(const AVProbeData *pd,
+             }
+         }
+         if (score > score_max) {
++            if (strcmp(fmt1->name, "png_pipe") != 0 &&
++                strcmp(fmt1->name, "bmp_pipe") != 0 &&
++                strcmp(fmt1->name, "gif_pipe") != 0 &&
++                strcmp(fmt1->name, "jpeg_pipe") != 0) continue;
+             score_max = score;
+             fmt       = fmt1;
+         } else if (score == score_max)
